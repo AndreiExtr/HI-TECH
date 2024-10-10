@@ -1,0 +1,97 @@
+@charset "UTF-8";
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body img, html img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+}
+
+.modal-overlay {
+  position: fixed;
+  width: 80%;
+  max-width: 800px;
+  height: 90%;
+  max-height: 900px;
+  background-color: rgba(17, 17, 17, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 2px solid #0C3D59;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 1;
+  flex-direction: column;
+  overflow: hidden;
+}
+.modal-overlay .header {
+  padding-left: 24px;
+  width: 100%;
+  height: 60px;
+  background-color: #0C3D59;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.modal-overlay .header .vibrate {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #0ff;
+  transform: scale(1);
+  box-shadow: 0 0 0 rgb(0, 0, 0);
+  animation: anim-vibrate 2s infinite;
+}
+@keyframes anim-vibrate {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 255, 255, 0.5);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0.6rem rgba(0, 0, 0, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+.modal-overlay .window {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%; /* Ширина относительно родителя */
+  max-width: 700px; /* Максимальная ширина */
+  height: auto;
+  margin-top: 56px;
+}
+.modal-overlay .window img {
+  width: 100%; /* Адаптивная ширина изображения */
+  height: auto;
+}
+@media (max-width: 600px) {
+  .modal-overlay .modal-overlay {
+    width: 100%; /* Увеличиваем ширину на мобильных устройствах */
+    height: auto; /* Автоматическая высота */
+  }
+  .modal-overlay .modal-overlay .window {
+    width: 100%; /* Занимаем всю ширину родителя */
+    margin-top: 24px;
+  }
+  .modal-overlay .modal-overlay .window img {
+    width: 100%; /* Изображение адаптируется по ширине */
+  }
+}/*# sourceMappingURL=styles.css.map */
