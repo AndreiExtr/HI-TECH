@@ -12,6 +12,8 @@ body, html {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
 
   img {
     position: absolute;
@@ -119,11 +121,27 @@ body, html {
     align-items: center;
     justify-content: center;
     width: 90%; /* Ширина относительно родителя */
-    max-width: 530px; /* Максимальная ширина */
+    max-width: 520px; /* Максимальная ширина */
     height: auto;
+    padding: 24px 0;
     margin-top: 56px;
+    text-align: center;
 
-    img {
+    .card-img {
+      z-index: 1;
+      width: 203px; /* Адаптивная ширина изображения */
+      height: auto;
+      position: relative;
+    }
+
+    p{
+      max-width: 220px;
+      font-size: 1em;
+      margin-left: 18px;
+      color: $modal-text-color;
+    }
+
+    .modal-img {
       width: 100%; /* Адаптивная ширина изображения */
       height: auto;
     }
