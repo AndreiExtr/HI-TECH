@@ -36,6 +36,7 @@ body img, html img {
   z-index: 1;
   flex-direction: column;
   overflow: hidden;
+  padding-bottom: 20px;
 }
 .modal-overlay .header {
   width: 100%;
@@ -98,4 +99,43 @@ body img, html img {
   transform: translateX(-7px); /* Сместить влево на 18px */
   width: 100%; /* Адаптивная ширина изображения */
   height: auto;
+}
+.modal-overlay .inputs {
+  position: absolute;
+  bottom: 50px;
+  width: 90%;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+.modal-overlay .inputs .input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  width: 100%;
+}
+.modal-overlay .inputs .input-group .input-field {
+  position: relative;
+  background-color: rgba(8, 38, 63, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  height: 70px;
+  width: 100%;
+  padding: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #0ff;
+  border: none; /* Убираем стандартный бордер */
+  box-sizing: border-box;
+}
+.modal-overlay .inputs .input-group .input-field:focus {
+  background-color: rgba(12, 61, 89, 0.7);
+  outline: none;
+}
+.modal-overlay .inputs .input-group .error {
+  color: #ff0000;
+  font-size: 12px;
 }/*# sourceMappingURL=styles.css.map */

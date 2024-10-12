@@ -42,6 +42,7 @@ body, html {
   z-index: 1;
   flex-direction: column;
   overflow: hidden;
+  padding-bottom: 20px;
 
   .header{
     width: 100%;
@@ -145,6 +146,51 @@ body, html {
       transform: translateX(-7px); /* Сместить влево на 18px */
       width: 100%; /* Адаптивная ширина изображения */
       height: auto;
+    }
+  }
+
+  .inputs {
+    position: absolute;
+    bottom: 50px;
+    width: 90%;
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+      width: 100%;
+
+      .input-field {
+        position: relative;
+        background-color: rgba(8, 38, 63, 0.5);
+        backdrop-filter: blur(10px);
+        height: 70px;
+        width: 100%;
+        padding: 16px;
+        font-size: 14px;
+        font-weight: 500;
+        color: $modal-strip-color;
+        border: none; /* Убираем стандартный бордер */
+        box-sizing: border-box;
+      
+        &:focus {
+          background-color: rgba(12, 61, 89, 0.7);
+          outline: none;
+        }
+      
+      }
+      
+
+      .error {
+        color: #ff0000;
+        font-size: 12px;
+      }
     }
   }
 }
