@@ -102,7 +102,7 @@ body img, html img {
 }
 .modal-overlay .inputs {
   position: absolute;
-  bottom: 50px;
+  bottom: 190px;
   width: 90%;
   max-width: 520px;
   display: flex;
@@ -195,4 +195,31 @@ body img, html img {
 .modal-overlay .inputs .input-group .error {
   color: #ff0000;
   font-size: 12px;
+}
+.modal-overlay .btn-login {
+  position: absolute;
+  bottom: 80px;
+  width: 176px;
+  height: 70px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease; /* Плавный переход для изменения масштаба */
+}
+.modal-overlay .btn-login p {
+  position: absolute;
+  top: 15px;
+  left: 70px;
+  color: #eee;
+  z-index: 1;
+  transition: color 0.3s ease; /* Плавный переход для цвета текста */
+}
+.modal-overlay .btn-login:hover {
+  transform: scale(1.1); /* Изменение масштаба при наведении */
+}
+.modal-overlay .btn-login:hover p {
+  color: #66ffff; /* Изменение цвета текста при наведении */
 }/*# sourceMappingURL=styles.css.map */
