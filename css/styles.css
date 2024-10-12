@@ -83,7 +83,7 @@ body img, html img {
 }
 .modal-overlay .window .card-img {
   z-index: 1;
-  width: 60%;
+  width: 50%;
   max-width: 250px; /* Адаптивная ширина изображения */
   height: auto;
   position: relative;
@@ -95,7 +95,7 @@ body img, html img {
   color: #eee;
 }
 .modal-overlay .window .modal-img {
-  transform: translateX(-18px); /* Сместить влево на 18px */
+  transform: translateX(-7px); /* Сместить влево на 18px */
   width: 100%; /* Адаптивная ширина изображения */
   height: auto;
 }/*# sourceMappingURL=styles.css.map */
