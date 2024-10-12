@@ -122,9 +122,29 @@ body img, html img {
 .modal-overlay .inputs .input-group .border-left {
   position: absolute;
   width: 6px; /* Толщина полосы */
-  height: 90px; /* Высота полосы */
+  height: 70px; /* Высота полосы */
   background-color: #0ff; /* Цвет полосы */
   z-index: 3;
+}
+.modal-overlay .inputs .input-group .border-linear1 {
+  position: absolute;
+  top: -8px;
+  left: 7px;
+  width: 6px;
+  height: 20px;
+  background-color: #0ff;
+  z-index: 3;
+  transform: rotate(90deg);
+}
+.modal-overlay .inputs .input-group .border-linear2 {
+  position: absolute;
+  bottom: -8px;
+  left: 7px;
+  width: 6px;
+  height: 20px;
+  background-color: #0ff;
+  z-index: 3;
+  transform: rotate(90deg);
 }
 .modal-overlay .inputs .input-group .input-field {
   position: relative;
@@ -146,7 +166,7 @@ body img, html img {
 }
 .modal-overlay .inputs .input-group .border-right {
   width: 6px; /* Толщина полосы */
-  height: 90px; /* Высота полосы */
+  height: 70px; /* Высота полосы */
   background-color: #0ff; /* Цвет полосы */
 }
 .modal-overlay .inputs .input-group .error {

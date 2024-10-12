@@ -171,9 +171,31 @@ body, html {
         .border-left {
           position: absolute;
           width: 6px; /* Толщина полосы */
-          height: 90px; /* Высота полосы */
+          height: 70px; /* Высота полосы */
           background-color: $modal-strip-color; /* Цвет полосы */
           z-index: 3;
+        }
+
+        .border-linear1{
+          position: absolute;
+          top: -8px;
+          left: 7px;
+          width: 6px;
+          height: 20px;
+          background-color: #0ff;
+          z-index: 3;
+          transform: rotate(90deg);
+        }
+
+        .border-linear2{
+          position: absolute;
+          bottom: -8px;
+          left: 7px;
+          width: 6px;
+          height: 20px;
+          background-color: #0ff;
+          z-index: 3;
+          transform: rotate(90deg);
         }
 
       .input-field {
@@ -197,7 +219,7 @@ body, html {
 
         .border-right {
           width: 6px; /* Толщина полосы */
-          height: 90px; /* Высота полосы */
+          height: 70px; /* Высота полосы */
           background-color: $modal-strip-color; /* Цвет полосы */
         }
       
