@@ -168,11 +168,20 @@ body, html {
       width: 100%;
 
         /* Вертикальная полоса справа */
-        .border-left {
+        .border-left{
           position: absolute;
           width: 6px; /* Толщина полосы */
           height: 70px; /* Высота полосы */
-          background-color: $modal-strip-color; /* Цвет полосы */
+          background-color: $modal-border-color; /* Цвет полосы */
+          z-index: 3;
+        }
+
+        .border-right{
+          position: absolute;
+          right: 0;
+          width: 6px; /* Толщина полосы */
+          height: 70px; /* Высота полосы */
+          background-color: $modal-border-color; /* Цвет полосы */
           z-index: 3;
         }
 
@@ -182,7 +191,18 @@ body, html {
           left: 7px;
           width: 6px;
           height: 20px;
-          background-color: #0ff;
+          background-color: $modal-border-color;
+          z-index: 3;
+          transform: rotate(90deg);
+        }
+
+        .border-linear1_1{
+          position: absolute;
+          top: -8px;
+          right: 7px;
+          width: 6px;
+          height: 20px;
+          background-color: $modal-border-color;
           z-index: 3;
           transform: rotate(90deg);
         }
@@ -193,7 +213,18 @@ body, html {
           left: 7px;
           width: 6px;
           height: 20px;
-          background-color: #0ff;
+          background-color: $modal-border-color;
+          z-index: 3;
+          transform: rotate(90deg);
+        }
+
+        .border-linear2_1{
+          position: absolute;
+          bottom: -8px;
+          right: 7px;
+          width: 6px;
+          height: 20px;
+          background-color: $modal-border-color;
           z-index: 3;
           transform: rotate(90deg);
         }
@@ -217,11 +248,7 @@ body, html {
         }
       }
 
-        .border-right {
-          width: 6px; /* Толщина полосы */
-          height: 70px; /* Высота полосы */
-          background-color: $modal-strip-color; /* Цвет полосы */
-        }
+        
       
       .error {
         color: #ff0000;
