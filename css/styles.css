@@ -23,7 +23,7 @@ body img, html img {
 .modal-overlay {
   position: fixed;
   width: 80%;
-  max-width: 800px;
+  max-width: 700px;
   height: 90%;
   max-height: 900px;
   background-color: rgba(17, 17, 17, 0.5);
@@ -38,12 +38,11 @@ body img, html img {
   overflow: hidden;
 }
 .modal-overlay .header {
-  padding-left: 24px;
   width: 100%;
   height: 60px;
   background-color: #0C3D59;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 }
 .modal-overlay .header .vibrate {
@@ -84,11 +83,14 @@ body img, html img {
 }
 .modal-overlay .window .card-img {
   z-index: 1;
-  width: 203px; /* Адаптивная ширина изображения */
+  width: 60%;
+  max-width: 250px; /* Адаптивная ширина изображения */
   height: auto;
+  margin-left: 18px;
   position: relative;
 }
 .modal-overlay .window p {
+  width: 100%;
   max-width: 220px;
   font-size: 1em;
   margin-left: 18px;
@@ -97,17 +99,4 @@ body img, html img {
 .modal-overlay .window .modal-img {
   width: 100%; /* Адаптивная ширина изображения */
   height: auto;
-}
-@media (max-width: 600px) {
-  .modal-overlay .modal-overlay {
-    width: 100%; /* Увеличиваем ширину на мобильных устройствах */
-    height: auto; /* Автоматическая высота */
-  }
-  .modal-overlay .modal-overlay .window {
-    width: 100%; /* Занимаем всю ширину родителя */
-    margin-top: 24px;
-  }
-  .modal-overlay .modal-overlay .window img {
-    width: 100%; /* Изображение адаптируется по ширине */
-  }
 }/*# sourceMappingURL=styles.css.map */
