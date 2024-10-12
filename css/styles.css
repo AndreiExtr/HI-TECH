@@ -86,17 +86,16 @@ body img, html img {
   width: 60%;
   max-width: 250px; /* Адаптивная ширина изображения */
   height: auto;
-  margin-left: 18px;
   position: relative;
 }
 .modal-overlay .window p {
   width: 100%;
   max-width: 220px;
   font-size: 1em;
-  margin-left: 18px;
   color: #eee;
 }
 .modal-overlay .window .modal-img {
+  transform: translateX(-18px); /* Сместить влево на 18px */
   width: 100%; /* Адаптивная ширина изображения */
   height: auto;
 }/*# sourceMappingURL=styles.css.map */

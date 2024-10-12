@@ -131,7 +131,6 @@ body, html {
       width: 60%;
       max-width: 250px; /* Адаптивная ширина изображения */
       height: auto;
-      margin-left: 18px;
       position: relative;
     }
 
@@ -139,15 +138,13 @@ body, html {
       width: 100%;
       max-width: 220px;
       font-size: 1em;
-      margin-left: 18px;
       color: $modal-text-color;
     }
 
     .modal-img {
+      transform: translateX(-18px); /* Сместить влево на 18px */
       width: 100%; /* Адаптивная ширина изображения */
       height: auto;
     }
   }
-
-  
 }
