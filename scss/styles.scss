@@ -293,5 +293,19 @@ body, html {
         color: lighten($modal-strip-color, 20%); /* Изменение цвета текста при наведении */
       }
     }
+
+    &:active {
+      transform: scale(0.95); // уменьшение при нажатии
+    }
+
+    @media (max-width: 768px) {
+      &:hover{
+        transform: scale(1);
+      }
+
+      &:active {
+        transform: scale(0.95); // уменьшение при нажатии
+      }
+    }
   }
 }

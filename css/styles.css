@@ -228,4 +228,15 @@ body img, html img {
 }
 .modal-overlay .btn-login:hover p {
   color: #66ffff; /* Изменение цвета текста при наведении */
+}
+.modal-overlay .btn-login:active {
+  transform: scale(0.95);
+}
+@media (max-width: 768px) {
+  .modal-overlay .btn-login:hover {
+    transform: scale(1);
+  }
+  .modal-overlay .btn-login:active {
+    transform: scale(0.95);
+  }
 }/*# sourceMappingURL=styles.css.map */
