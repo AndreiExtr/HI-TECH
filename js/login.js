@@ -68,18 +68,18 @@ logoutBtn.addEventListener('click', function() {
   logoutBtn.style.display = 'none';
 });
 
-window.addEventListener('DOMContentLoaded', function() {
-  const loggedInUser = localStorage.getItem('loggedInUser');
+// window.addEventListener('DOMContentLoaded', function() {
+//   const loggedInUser = localStorage.getItem('loggedInUser');
 
-  if (loggedInUser) {
-    // Если пользователь уже авторизован, скрываем окно входа
-    allInputs.style.display = 'none';
-    allWindows.style.display = 'none';
-    loginBtn.style.display = 'none';
-  } else {
-    // Если пользователь не авторизован, показываем форму входа
-    allInputs.style.display = 'flex';
-    allWindows.style.display = 'flex';
-    loginBtn.style.display = 'flex';
-  }
-});
+//   if (loggedInUser) {
+//     // Если пользователь уже авторизован, скрываем окно входа
+//     allInputs.style.display = 'none';
+//     allWindows.style.display = 'none';
+//     loginBtn.style.display = 'none';
+//   } else {
+//     // Если пользователь не авторизован, показываем форму входа
+//     allInputs.style.display = 'flex';
+//     allWindows.style.display = 'flex';
+//     loginBtn.style.display = 'flex';
+//   }
+// });
