@@ -41,8 +41,8 @@ loginBtn.addEventListener('click', function(event) {
       requiredIdError.style.display = 'none';
       invalidError.style.display = 'flex'; // Показываем ошибку неверных данных
     } else {
-      // // Сохраняем информацию о том, что пользователь вошел в систему
-      // localStorage.setItem('loggedInUser', JSON.stringify(user));
+      // Сохраняем информацию о том, что пользователь вошел в систему
+      localStorage.setItem('loggedInUser', JSON.stringify(user));
 
       // Скрываем элементы окна входа
       allInputs.style.display = 'none';
