@@ -257,9 +257,15 @@ body, html {
     }
   }
 
+  .error{
+    position: absolute;
+    bottom: 130px;
+    color: $modal-text-color;
+  }
+
   .btn-login {
     position: absolute;
-    bottom: 60px;
+    bottom: 40px;
     width: 176px;
     height: 70px;
     background: transparent;

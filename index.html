@@ -12,12 +12,12 @@
     <div class="header">
       <div class="vibrate"></div>
     </div>
-    <div class="window">
+    <div class="window" id="window">
       <img class="card-img" src="./img/icon-card.png">
       <p>To login enter your <br> ID and password</p>
       <img class="modal-img" src="./img/modal.png">
     </div>
-    <div class="inputs">
+    <div class="inputs" id="inputs">
       <div class="input-group">
         <div class="border-linear1"></div>
         <div class="border-left"></div>
@@ -26,7 +26,6 @@
         <div class="border-linear1_1"></div>
         <div class="border-right"></div>
         <div class="border-linear2_1"></div>
-        <span class="error" style="display: none;">This field is required.</span>
       </div>
       <div class="input-group">
         <div class="border-linear1"></div>
@@ -36,10 +35,12 @@
         <div class="border-linear1_1"></div>
         <div class="border-right"></div>
         <div class="border-linear2_1"></div>
-        <span class="error" style="display: none;">This field is required.</span>
       </div>
     </div>
-    <button class="btn-login">
+    <!-- Ошибки -->
+    <span class="error" style="display: none;" id="required">This field is required</span><br>
+    <span class="error" style="display: none;" id="invalid">Invalid ID or password</span><br>
+    <button class="btn-login" id="loginBtn">
       <p>Login</p>
       <svg class="login-svg" width="176" height="48" viewBox="0 0 176 48"  xmlns="http://www.w3.org/2000/svg">
         <path class="btn-fon" opacity="0.8" d="M176 48V3L0 3V48L176 48Z" fill="#0C3E5A"/>  <!-- фон кнопки -->
@@ -50,6 +51,7 @@
       </svg>
     </button>
   </div>
+  <script src="./js/login.js"></script> 
   <script src="./js/ID.js"></script>  
 </body>
 </html>
