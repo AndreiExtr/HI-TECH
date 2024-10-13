@@ -198,7 +198,7 @@ body img, html img {
 }
 .modal-overlay .btn-login {
   position: absolute;
-  bottom: 80px;
+  bottom: 60px;
   width: 176px;
   height: 70px;
   background: transparent;
@@ -217,8 +217,14 @@ body img, html img {
   z-index: 1;
   transition: color 0.3s ease; /* Плавный переход для цвета текста */
 }
+.modal-overlay .btn-login:hover .login-svg path, .modal-overlay .btn-login:hover .login-svg rect {
+  fill: #0ff; /* Новый цвет для всех path и rect */
+}
 .modal-overlay .btn-login:hover {
   transform: scale(1.1); /* Изменение масштаба при наведении */
+}
+.modal-overlay .btn-login:hover .login-svg .btn-fon {
+  fill: #0C3E5A;
 }
 .modal-overlay .btn-login:hover p {
   color: #66ffff; /* Изменение цвета текста при наведении */

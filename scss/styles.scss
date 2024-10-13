@@ -259,7 +259,7 @@ body, html {
 
   .btn-login {
     position: absolute;
-    bottom: 80px;
+    bottom: 60px;
     width: 176px;
     height: 70px;
     background: transparent;
@@ -278,14 +278,20 @@ body, html {
       z-index: 1;
       transition: color 0.3s ease; /* Плавный переход для цвета текста */
     }
+
+    &:hover .login-svg path, 
+    &:hover .login-svg rect {
+      fill: $modal-strip-color; /* Новый цвет для всех path и rect */
+    }
   
     &:hover {
       transform: scale(1.1); /* Изменение масштаба при наведении */
-  
+      .login-svg .btn-fon{
+        fill: #0C3E5A;
+      }
       p {
         color: lighten($modal-strip-color, 20%); /* Изменение цвета текста при наведении */
       }
     }
   }
-  
 }
