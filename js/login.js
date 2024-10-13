@@ -64,6 +64,10 @@ logoutBtn.addEventListener('click', function() {
   allWindows.style.display = 'flex';
   loginBtn.style.display = 'flex';
 
+  // Очищаем значения полей ввода
+  idInput.value = '';
+  passwordInput.value = '';
+
   // Скрываем кнопку "Logout"
   logoutBtn.style.display = 'none';
 });
