@@ -41,8 +41,8 @@ loginBtn.addEventListener('click', function(event) {
       requiredIdError.style.display = 'none';
       invalidError.style.display = 'flex'; // Показываем ошибку неверных данных
     } else {
-      // Сохраняем информацию о том, что пользователь вошел в систему
-      localStorage.setItem('loggedInUser', JSON.stringify(user));
+      // // Сохраняем информацию о том, что пользователь вошел в систему
+      // localStorage.setItem('loggedInUser', JSON.stringify(user));
 
       // Скрываем элементы окна входа
       allInputs.style.display = 'none';
@@ -56,8 +56,8 @@ loginBtn.addEventListener('click', function(event) {
 });
 
 logoutBtn.addEventListener('click', function() {
-  // Удаляем информацию о пользователе из localStorage
-  localStorage.removeItem('loggedInUser');
+  // // Удаляем информацию о пользователе из localStorage
+  // localStorage.removeItem('loggedInUser');
   
   // Показываем окно входа снова
   allInputs.style.display = 'flex';
@@ -68,18 +68,3 @@ logoutBtn.addEventListener('click', function() {
   logoutBtn.style.display = 'none';
 });
 
-// window.addEventListener('DOMContentLoaded', function() {
-//   const loggedInUser = localStorage.getItem('loggedInUser');
-
-//   if (loggedInUser) {
-//     // Если пользователь уже авторизован, скрываем окно входа
-//     allInputs.style.display = 'none';
-//     allWindows.style.display = 'none';
-//     loginBtn.style.display = 'none';
-//   } else {
-//     // Если пользователь не авторизован, показываем форму входа
-//     allInputs.style.display = 'flex';
-//     allWindows.style.display = 'flex';
-//     loginBtn.style.display = 'flex';
-//   }
-// });
