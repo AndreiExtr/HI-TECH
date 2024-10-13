@@ -263,6 +263,59 @@ body, html {
     color: $modal-text-color;
   }
 
+  .btn-logout {
+    display: none;
+    position: absolute;
+    bottom: 40px;
+    width: 176px;
+    height: 70px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease; /* Плавный переход для изменения масштаба */
+  
+    p {
+      position: absolute;
+      top: 15px;
+      left: 70px;
+      color: $modal-text-color;
+      z-index: 1;
+      transition: color 0.3s ease; /* Плавный переход для цвета текста */
+    }
+
+    &:hover .login-svg path, 
+    &:hover .login-svg rect {
+      fill: $modal-strip-color; /* Новый цвет для всех path и rect */
+    }
+  
+    &:hover {
+      transform: scale(1.1); /* Изменение масштаба при наведении */
+      .login-svg .btn-fon{
+        fill: #0C3E5A;
+      }
+      p {
+        color: lighten($modal-strip-color, 20%); /* Изменение цвета текста при наведении */
+      }
+    }
+
+    &:active {
+      transform: scale(0.95); // уменьшение при нажатии
+    }
+
+    @media (max-width: 768px) {
+      &:hover{
+        transform: scale(1);
+      }
+
+      &:active {
+        transform: scale(0.95); // уменьшение при нажатии
+      }
+    }
+  }
+
   .btn-login {
     position: absolute;
     bottom: 40px;

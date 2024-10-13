@@ -201,6 +201,51 @@ body img, html img {
   bottom: 130px;
   color: #eee;
 }
+.modal-overlay .btn-logout {
+  display: none;
+  position: absolute;
+  bottom: 40px;
+  width: 176px;
+  height: 70px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease; /* Плавный переход для изменения масштаба */
+}
+.modal-overlay .btn-logout p {
+  position: absolute;
+  top: 15px;
+  left: 70px;
+  color: #eee;
+  z-index: 1;
+  transition: color 0.3s ease; /* Плавный переход для цвета текста */
+}
+.modal-overlay .btn-logout:hover .login-svg path, .modal-overlay .btn-logout:hover .login-svg rect {
+  fill: #0ff; /* Новый цвет для всех path и rect */
+}
+.modal-overlay .btn-logout:hover {
+  transform: scale(1.1); /* Изменение масштаба при наведении */
+}
+.modal-overlay .btn-logout:hover .login-svg .btn-fon {
+  fill: #0C3E5A;
+}
+.modal-overlay .btn-logout:hover p {
+  color: #66ffff; /* Изменение цвета текста при наведении */
+}
+.modal-overlay .btn-logout:active {
+  transform: scale(0.95);
+}
+@media (max-width: 768px) {
+  .modal-overlay .btn-logout:hover {
+    transform: scale(1);
+  }
+  .modal-overlay .btn-logout:active {
+    transform: scale(0.95);
+  }
+}
 .modal-overlay .btn-login {
   position: absolute;
   bottom: 40px;

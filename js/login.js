@@ -15,6 +15,7 @@ const requiredIdError = document.getElementById('required');
 const invalidError = document.getElementById('invalid');
 
 const loginBtn = document.getElementById('loginBtn');
+const logoutBtn = document.getElementById('logoutBtn');
 
 // Событие при нажатии на кнопку
 loginBtn.addEventListener('click', function(event) {
@@ -47,8 +48,24 @@ loginBtn.addEventListener('click', function(event) {
       allInputs.style.display = 'none';
       allWindows.style.display = 'none';
       loginBtn.style.display = 'none';
+
+      // Показываем кнопку "Logout"
+      logoutBtn.style.display = 'flex';
     }
   }
+});
+
+logoutBtn.addEventListener('click', function() {
+  // Удаляем информацию о пользователе из localStorage
+  localStorage.removeItem('loggedInUser');
+  
+  // Показываем окно входа снова
+  allInputs.style.display = 'flex';
+  allWindows.style.display = 'flex';
+  loginBtn.style.display = 'flex';
+
+  // Скрываем кнопку "Logout"
+  logoutBtn.style.display = 'none';
 });
 
 window.addEventListener('DOMContentLoaded', function() {
