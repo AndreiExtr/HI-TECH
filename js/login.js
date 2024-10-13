@@ -22,6 +22,10 @@ loginBtn.addEventListener('click', function(event) {
 
   let hasError = false;
 
+   // Скрываем предыдущие ошибки
+   requiredIdError.style.display = 'none';
+   invalidError.style.display = 'none';
+
   // Проверка на пустое поле ID или на пустое поле пароля
   if (!idInput.value.trim()  || !passwordInput.value.trim()) {
     requiredIdError.style.display = 'flex';
@@ -36,10 +40,29 @@ loginBtn.addEventListener('click', function(event) {
       requiredIdError.style.display = 'none';
       invalidError.style.display = 'flex'; // Показываем ошибку неверных данных
     } else {
-      // Здесь можно выполнить переход на другую страницу или выполнить другие действия
+      // Сохраняем информацию о том, что пользователь вошел в систему
+      localStorage.setItem('loggedInUser', JSON.stringify(user));
+
+      // Скрываем элементы окна входа
       allInputs.style.display = 'none';
       allWindows.style.display = 'none';
       loginBtn.style.display = 'none';
     }
+  }
+});
+
+window.addEventListener('DOMContentLoaded', function() {
+  const loggedInUser = localStorage.getItem('loggedInUser');
+
+  if (loggedInUser) {
+    // Если пользователь уже авторизован, скрываем окно входа
+    allInputs.style.display = 'none';
+    allWindows.style.display = 'none';
+    loginBtn.style.display = 'none';
+  } else {
+    // Если пользователь не авторизован, показываем форму входа
+    allInputs.style.display = 'flex';
+    allWindows.style.display = 'flex';
+    loginBtn.style.display = 'flex';
   }
 });
