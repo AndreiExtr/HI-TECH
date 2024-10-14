@@ -159,6 +159,13 @@ body, html {
     height: 360px;
     margin-top: 56px;
 
+    .arrows{
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
     .outer-circle{
       width: 356px;
       height: 356px;

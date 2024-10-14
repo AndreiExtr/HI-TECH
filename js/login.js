@@ -49,6 +49,7 @@ loginBtn.addEventListener('click', function(event) {
       allWindows.style.display = 'none';
       loginBtn.style.display = 'none';
 
+      avatar.style.display = 'flex';
       logoutBtn.style.display = 'flex';
     }
   }
@@ -66,6 +67,7 @@ logoutBtn.addEventListener('click', function() {
   idInput.value = '';
   passwordInput.value = '';
 
+  avatar.style.display = 'none';
   logoutBtn.style.display = 'none';
 });
 

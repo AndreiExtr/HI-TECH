@@ -110,6 +110,12 @@ body img, html img {
   height: 360px;
   margin-top: 56px;
 }
+.modal-overlay .avatar .arrows {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .modal-overlay .avatar .outer-circle {
   width: 356px;
   height: 356px;
