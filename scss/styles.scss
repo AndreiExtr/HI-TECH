@@ -159,6 +159,18 @@ body, html {
     height: 360px;
     margin-top: 56px;
 
+    .stroke-circle {
+      position: absolute;
+      width: 280px;  /* Ширина круга */
+      height: 280px; /* Высота круга */
+      border-radius: 50%;  /* Скругление для создания круга */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto; /* Центрирование круга на странице */
+    }
+  
+
     .arrows{
       position: absolute;
       display: flex;
