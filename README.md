@@ -1,6 +1,6 @@
 To login use the user data from the ID and password list.
 
-![image](/images/скрин.png)
+![image](/images/scrin.png)
 
 ```
 const users = [
