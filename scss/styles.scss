@@ -208,6 +208,32 @@ body, html {
     }
   }
 
+  .table {
+    margin-top: 32px;
+    position: relative;
+    width: 400px;
+    border-collapse: collapse;
+    z-index: 4;
+    color: #ffffff;
+
+    table{
+      width: 100%;
+    }
+
+    td {
+      padding: 12px; 
+      text-align: left; 
+    }        
+  
+
+    tbody tr td {
+      font-size: 14px;
+      font-weight: 200;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+  }
+
   .inputs {
     position: absolute;
     bottom: 190px;
