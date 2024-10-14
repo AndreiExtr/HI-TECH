@@ -7,6 +7,7 @@ const users = [
 ];
 
 const allWindows = document.getElementById('window');
+const avatar = document.getElementById('avatar');
 const allInputs = document.getElementById('inputs');
 const idInput = document.getElementById('idNumber');
 const passwordInput = document.getElementById('password');
@@ -78,6 +79,7 @@ window.addEventListener('DOMContentLoaded', function() {
     allWindows.style.display = 'none';
     loginBtn.style.display = 'none';
 
+    avatar.style.display = 'flex';
     logoutBtn.style.display = 'flex';
   } else {
 
@@ -85,6 +87,7 @@ window.addEventListener('DOMContentLoaded', function() {
     allWindows.style.display = 'flex';
     loginBtn.style.display = 'flex';
 
+    avatar.style.display = 'none';
     logoutBtn.style.display = 'none';
   }
 });

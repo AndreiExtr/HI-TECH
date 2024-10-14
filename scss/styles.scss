@@ -149,6 +149,46 @@ body, html {
     }
   }
 
+  .avatar{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 360px;
+    height: 360px;
+    margin-top: 56px;
+
+    .outer-circle{
+      width: 356px;
+      height: 356px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto; /* Центрирование контейнера */
+      animation: rotate 7s linear infinite;
+    }
+
+    .user {
+      position: absolute; /* исправляем на absolute, чтобы аватар накладывался поверх круга */
+      width: 260px;
+      height: 260px;
+      background-image: url('../img/avatar.png');
+      background-size: cover; /* добавляем для корректного отображения изображения */
+      background-position: center;
+      border-radius: 50%; /* чтобы картинка была круглой */
+    }
+
+    @keyframes rotate {
+      from {
+          transform: rotate(0deg);
+      }
+      to {
+          transform: rotate(360deg);
+      }
+    }
+  }
+
   .inputs {
     position: absolute;
     bottom: 190px;
