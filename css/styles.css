@@ -41,9 +41,11 @@ body img, html img {
 .modal-overlay .header {
   width: 100%;
   height: 60px;
+  padding: 12px;
+  box-sizing: border-box;
   background-color: #0C3D59;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 .modal-overlay .header .vibrate {
