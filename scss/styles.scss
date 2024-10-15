@@ -186,9 +186,46 @@ body, html {
 
     .tab-content {
       display: none;
+      
+
+      .window-result {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 90%; /* Ширина относительно родителя */
+        max-width: 420px; /* Максимальная ширина */
+        height: 250px;
+        padding: 24px 0;
+        box-sizing: border-box;
+        margin-top: 56px;
+        text-align: center;
+    
+        .result {
+          z-index: 1;
+          width: 50%;
+          max-width: 110px; /* Адаптивная ширина изображения */
+          height: auto;
+          position: relative;
+        }
+    
+        p{
+          width: 100%;
+          max-width: 220px;
+          font-size: 1em;
+          color: $modal-text-color;
+        }
+    
+        .modal-img {
+          transform: translateX(-7px); /* Сместить влево на 18px */
+          width: 100%; /* Адаптивная ширина изображения */
+          height: auto;
+        }
+      }
 
       .table-tb {
-        margin-top: 32px;
+        margin-top: 56px;
         position: relative;
         max-width: 650px;
         width: 90%;
