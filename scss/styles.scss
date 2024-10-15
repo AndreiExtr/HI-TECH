@@ -1,5 +1,5 @@
 $modal-bg-color: rgba(17, 17, 17, 0.5);  // Прозрачный фон
-$modal-text-color: #eee;  // Светлый текст
+$modal-text-color: rgb(238, 238, 238);  // Светлый текст
 $modal-border-color: #0C3D59;  // Неоновый голубой акцент
 $modal-linear-color: #112b3a;  // Неоновый голубой акцент
 $modal-strip-color: #0ff;  // Полоса с неоновым акцентом
@@ -227,7 +227,14 @@ body, html {
           font-size: 14px;
           font-weight: 100;
           text-transform: uppercase;
-          color: $modal-text-color;
+          color: rgb(238, 238, 238, 0.5);
+        }
+
+        tbody tr:hover td {
+          font-size: 14px;
+          font-weight: 100;
+          text-transform: uppercase;
+          color: rgb(238, 238, 238, 0.9);
         }
       }
     }
