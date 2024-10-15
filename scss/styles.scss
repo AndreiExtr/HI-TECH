@@ -1,6 +1,7 @@
 $modal-bg-color: rgba(17, 17, 17, 0.5);  // Прозрачный фон
 $modal-text-color: #eee;  // Светлый текст
 $modal-border-color: #0C3D59;  // Неоновый голубой акцент
+$modal-linear-color: #112b3a;  // Неоновый голубой акцент
 $modal-strip-color: #0ff;  // Полоса с неоновым акцентом
 $modal-shadow-color: rgba(0, 255, 255, 0.5);  // Тень с голубым свечением
 
@@ -185,6 +186,50 @@ body, html {
 
     .tab-content {
       display: none;
+
+      .table-tb {
+        margin-top: 32px;
+        position: relative;
+        max-width: 650px;
+        width: 90%;
+        border-collapse: collapse;
+        z-index: 4;
+    
+        table{
+          width: 100%;
+          border-collapse: collapse; /* Убираем промежутки между ячейками для более точных линий */
+          background-color: rgba(12, 61, 89, 0.164);
+          backdrop-filter: blur(10px);
+
+          thead{
+            border-top: 1px solid $modal-linear-color;
+            border-bottom: 1px solid $modal-linear-color;
+          }
+
+          tbody tr{
+            border-bottom: 1px solid $modal-linear-color;
+
+            &:hover{
+              background-color: rgba(65, 65, 65, 0.089);
+              backdrop-filter: blur(10px);
+            }
+          }
+        }
+
+        th, td {
+          padding: 12px; 
+          text-align: left; 
+          color: $modal-text-color;
+        }        
+      
+    
+        tbody tr td {
+          font-size: 14px;
+          font-weight: 100;
+          text-transform: uppercase;
+          color: $modal-text-color;
+        }
+      }
     }
     
     .tab-content.active {
