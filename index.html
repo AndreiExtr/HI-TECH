@@ -32,55 +32,73 @@
       <p>To login enter your <br> ID and password</p>
       <img class="modal-img" src="./img/modal.png">
     </div>
-    <div class="avatar" id="avatar">
-      <div class="stroke-circle">
-        <svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle opacity="0.7" cx="150" cy="149.75" r="149" stroke="white" stroke-linecap="round" stroke-dasharray="5 8"/>
-        </svg>
-      </div>    
-      <div class="outer-circle">
-        <svg width="356" height="356" viewBox="0 0 356 356" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="178" cy="178" r="176" stroke="#0C3D59" stroke-width="4"/>
-            <path d="M88.9999 24.5982C61.9405 40.2209 39.4702 62.6912 23.8475 89.7506L35.9947 96.7638C50.3864 71.8367 71.086 51.1371 96.0131 36.7454L88.9999 24.5982Z" fill="#0C3D59"/>
-            <path d="M82.1938 34.7014C63.0852 47.4104 46.6962 63.7943 33.9811 82.8989L37.1449 85.0045C49.5806 66.3196 65.6096 50.2957 84.2985 37.8659L82.1938 34.7014Z" fill="#18FEFE"/>
-            <path d="M267 332.903C294.059 317.28 316.529 294.81 332.152 267.75L320.005 260.737C305.613 285.664 284.914 306.364 259.987 320.756L267 332.903Z" fill="#0C3D59"/>
-            <path d="M273.806 322.8C292.914 310.091 309.303 293.707 322.019 274.602L318.855 272.497C306.419 291.182 290.39 307.206 271.701 319.635L273.806 322.8Z" fill="#18FEFE"/>
-        </svg>
+    <div class="tabs" id="tabs">
+      <!-- Вкладки -->
+      <div class="tab-buttons">
+        <button class="tab-button active" onclick="openTab(event, 'tab1')">USER</button>
+        <button class="tab-button" onclick="openTab(event, 'tab2')">Tab 2</button>
       </div>
-      <div class="arrows">
-        <svg width="326" height="18" viewBox="0 0 339 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M7.07114 16.3065L8.48535 17.7207L16.9706 9.23542L8.48535 0.750141L7.07114 2.16435L14.1422 9.23542L7.07114 16.3065Z" fill="#18FEFE"/>
-          <path d="M331.87 2.16617L330.456 0.751953L321.971 9.23723L330.456 17.7225L331.87 16.3083L324.799 9.23723L331.87 2.16617Z" fill="#18FEFE"/>
-        </svg>
-      </div>
-      <div class="user"></div>    
-    </div>
-    <div class="table" id="table">
-      <table>
-        <tbody>
-            <tr>
+    
+      <!-- Первый таб с аватаром и таблицей -->
+      <div id="tab1" class="tab-content active">
+        <div class="avatar" id="avatar">
+          <div class="stroke-circle">
+            <svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle opacity="0.7" cx="150" cy="149.75" r="149" stroke="white" stroke-linecap="round" stroke-dasharray="5 8"/>
+            </svg>
+          </div>    
+          <div class="outer-circle">
+            <svg width="316" height="316" viewBox="0 0 356 356" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="178" cy="178" r="176" stroke="#0C3D59" stroke-width="4"/>
+              <path d="M88.9999 24.5982C61.9405 40.2209 39.4702 62.6912 23.8475 89.7506L35.9947 96.7638C50.3864 71.8367 71.086 51.1371 96.0131 36.7454L88.9999 24.5982Z" fill="#0C3D59"/>
+              <path d="M82.1938 34.7014C63.0852 47.4104 46.6962 63.7943 33.9811 82.8989L37.1449 85.0045C49.5806 66.3196 65.6096 50.2957 84.2985 37.8659L82.1938 34.7014Z" fill="#18FEFE"/>
+              <path d="M267 332.903C294.059 317.28 316.529 294.81 332.152 267.75L320.005 260.737C305.613 285.664 284.914 306.364 259.987 320.756L267 332.903Z" fill="#0C3D59"/>
+              <path d="M273.806 322.8C292.914 310.091 309.303 293.707 322.019 274.602L318.855 272.497C306.419 291.182 290.39 307.206 271.701 319.635L273.806 322.8Z" fill="#18FEFE"/>
+            </svg>
+          </div>
+          <div class="arrows">
+            <svg width="286" height="18" viewBox="0 0 339 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7.07114 16.3065L8.48535 17.7207L16.9706 9.23542L8.48535 0.750141L7.07114 2.16435L14.1422 9.23542L7.07114 16.3065Z" fill="#18FEFE"/>
+              <path d="M331.87 2.16617L330.456 0.751953L321.971 9.23723L330.456 17.7225L331.87 16.3083L324.799 9.23723L331.87 2.16617Z" fill="#18FEFE"/>
+            </svg>
+          </div>
+          <div class="user"></div>    
+        </div>
+        <div class="table" id="table">
+          <table>
+            <tbody>
+              <tr>
                 <td>Full Name</td>
                 <td style="font-weight: 700; text-align: right;">Qian Jiayi</td>
-            </tr>
-            <tr>
+              </tr>
+              <tr>
                 <td>Gender</td>
                 <td style="font-weight: 700; text-align: right;">Woman</td>
-            </tr>
-            <tr>
+              </tr>
+              <tr>
                 <td>Famous Family</td>
                 <td style="font-weight: 700; text-align: right;">Han nationality</td>
-            </tr>
-            <tr>
+              </tr>
+              <tr>
                 <td>ID</td>
                 <td style="font-weight: 700; text-align: right;">12 34 56</td>
-            </tr>
-            <tr>
+              </tr>
+              <tr>
                 <td>Residence</td>
                 <td style="font-weight: 700; text-align: right;">China</td>
-            </tr>
-        </tbody>
-      </table>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    
+      <!-- Второй таб -->
+      <div id="tab2" class="tab-content">
+        <h2>Tab 2 Content</h2>
+        <p>Здесь будет контент второго таба.</p>
+      </div>
     </div>
+    
     <div class="inputs" id="inputs">
       <div class="input-group">
         <div class="border-linear1"></div>
@@ -127,5 +145,6 @@
   </div>
   <script src="./js/login.js"></script> 
   <script src="./js/ID.js"></script>  
+  <script src="./js/tabs.js"></script>
 </body>
 </html>

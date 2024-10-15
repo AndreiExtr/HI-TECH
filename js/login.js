@@ -7,6 +7,7 @@ const users = [
 ];
 
 const allWindows = document.getElementById('window');
+const tabs = document.getElementById('tabs');
 const avatar = document.getElementById('avatar');
 const table = document.getElementById('table');
 const allInputs = document.getElementById('inputs');
@@ -50,6 +51,7 @@ loginBtn.addEventListener('click', function(event) {
       allWindows.style.display = 'none';
       loginBtn.style.display = 'none';
 
+      tabs.style.display = 'block';
       table.style.display = 'flex';
       avatar.style.display = 'flex';
       logoutBtn.style.display = 'flex';
@@ -69,6 +71,7 @@ logoutBtn.addEventListener('click', function() {
   idInput.value = '';
   passwordInput.value = '';
 
+  tabs.style.display = 'none';
   table.style.display = 'none';
   avatar.style.display = 'none';
   logoutBtn.style.display = 'none';
@@ -84,6 +87,7 @@ window.addEventListener('DOMContentLoaded', function() {
     allWindows.style.display = 'none';
     loginBtn.style.display = 'none';
 
+    tabs.style.display = 'block';
     table.style.display = 'flex';
     avatar.style.display = 'flex';
     logoutBtn.style.display = 'flex';
@@ -93,6 +97,7 @@ window.addEventListener('DOMContentLoaded', function() {
     allWindows.style.display = 'flex';
     loginBtn.style.display = 'flex';
 
+    tabs.style.display = 'none';
     table.style.display = 'none';
     avatar.style.display = 'none';
     logoutBtn.style.display = 'none';

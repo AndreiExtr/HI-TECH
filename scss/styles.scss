@@ -158,20 +158,57 @@ body, html {
     }
   }
 
+  .tabs {
+    width: 100%;
+
+    .tab-buttons {
+      display: flex;
+      justify-content: flex-start;
+      border-bottom: 2px solid #0C3D59;
+
+      .tab-button {
+        padding: 10px 20px;
+        cursor: pointer;
+        background-color: rgba(17, 17, 17, 0.5);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: none;
+        border-bottom: 2px solid transparent;
+        color: $modal-text-color;
+      }
+
+      .tab-button.active {
+        border-bottom: 2px solid $modal-strip-color;
+        color: $modal-strip-color;
+      }
+    }
+
+    .tab-content {
+      display: none;
+    }
+    
+    .tab-content.active {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
   .avatar{
     display: flex;
     position: relative;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 360px;
-    height: 360px;
-    margin-top: 56px;
+    max-width: 300px;
+    height: 300px;
+    margin-top: 50px;
 
     .stroke-circle {
       position: absolute;
-      width: 280px;  /* Ширина круга */
-      height: 280px; /* Высота круга */
+      width: 240px;  /* Ширина круга */
+      height: 240px; /* Высота круга */
       border-radius: 50%;  /* Скругление для создания круга */
       display: flex;
       justify-content: center;
@@ -188,8 +225,8 @@ body, html {
     }
 
     .outer-circle{
-      width: 356px;
-      height: 356px;
+      width: 300px;
+      height: 300px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -199,8 +236,8 @@ body, html {
 
     .user {
       position: absolute; /* исправляем на absolute, чтобы аватар накладывался поверх круга */
-      width: 260px;
-      height: 260px;
+      width: 220px;
+      height: 220px;
       background-image: url('../img/avatar.png');
       background-size: cover; /* добавляем для корректного отображения изображения */
       background-position: center;
